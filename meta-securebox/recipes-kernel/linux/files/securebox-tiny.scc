@@ -1,0 +1,8 @@
+define KMACHINE securebox
+define KTYPE tiny
+define KARCH x86_64
+
+include ktypes/tiny/tiny.scc
+branch securebox
+
+include securebox.scc

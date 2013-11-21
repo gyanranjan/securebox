@@ -1,0 +1,9 @@
+kconf hardware securebox.cfg
+
+include features/serial/8250.scc
+
+include cfg/usb-mass-storage.scc
+include features/power/intel.scc
+
+kconf hardware securebox-user-config.cfg
+include securebox-user-patches.scc

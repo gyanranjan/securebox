@@ -1,0 +1,14 @@
+define KMACHINE securebox
+define KTYPE preempt-rt
+define KARCH x86_64
+
+include ktypes/preempt-rt/preempt-rt.scc
+branch securebox
+
+include securebox.scc
+
+# default policy for preempt-rt kernels
+include cfg/usb-mass-storage.scc
+include cfg/boot-live.scc
+include features/latencytop/latencytop.scc
+include features/profiling/profiling.scc
